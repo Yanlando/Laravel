@@ -10,7 +10,7 @@
         <li class="nav-item">
             <a class="nav-link" href="/dashboard/post">
             <span data-feather="package"></span>
-            My post
+            My postinganasdf
             </a>
         </li>
         </ul>
