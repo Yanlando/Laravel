@@ -26,7 +26,7 @@
                 <a href="/dashboard/posts{{ $post->slug }}" class="badge bg-info"><span data-feather="eye"></span></a>
             </td>
             <td>
-                <a href="/dashboard/posts" class="badge bg-warning"><span data-feather="edit"></span></a>
+                <a href="{{ route('article.show',$post->slug) }}" class="badge bg-warning"><span data-feather="edit"></span></a>
             </td>
             <td>
                 <a href="/dashboard/posts" class="badge bg-danger"><span data-feather="x-circle"></span></a>
