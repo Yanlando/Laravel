@@ -4,6 +4,8 @@
 
 <h2>HHaHAH</h2>
 
-<h3>{{ $post->title }}3</h3>
+@foreach ($posts as $post)
+    <h1>{{ $post->name }}</h1>
+@endforeach
 
 @endsection

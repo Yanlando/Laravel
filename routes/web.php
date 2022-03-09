@@ -4,10 +4,10 @@
 use App\Models\Post;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardPostController;
 use GuzzleHttp\Middleware;
 use Illuminate\Routing\Route as RoutingRoute;
@@ -72,10 +72,10 @@ Route::get('/dashboard', function() {
     return view('dashboard.index');
 })->middleware('auth');    
 
-Route::resource('article', DashboardPostController::class)->middleware('auth');
+// Route::resource('/dashboard/posts', [DashboardPostController::class])->middleware('auth');
+Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
 
-
-// Route::get('/dashboard/posts{post:id}', [DashboardPostController::class, 'show'])->middleware('auth');
+Route::get('/dashboard/postsi{post:id}', [DashboardPostController::class, 'show'])->middleware('auth');
 
 
 
