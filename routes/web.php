@@ -11,7 +11,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardPostController;
 use GuzzleHttp\Middleware;
 use Illuminate\Routing\Route as RoutingRoute;
-
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -75,7 +75,7 @@ Route::get('/dashboard', function() {
 // Route::resource('/dashboard/posts', [DashboardPostController::class])->middleware('auth');
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
 
-Route::get('/dashboard/postsi{post:id}', [DashboardPostController::class, 'show'])->middleware('auth');
+Route::get('/dashboard/post/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');
 
 
 
