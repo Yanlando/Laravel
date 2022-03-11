@@ -41,4 +41,16 @@ class PostController extends Controller
             "post" => $postingan
         ]);
     }
+
+    public function api()
+    {
+
+        $posts = Post::all();
+        return response()->json($posts);
+        // return view('post', [
+        //     "title" => "Single Post",
+        //     "active" => 'posts',
+        //     "post" => $postingan
+        // ]);
+    }
 }
