@@ -11,7 +11,11 @@
             <a href="/dashboard/posts" class="btn btn-success"><span data-feather="arrow-left"></span> Back To my Posts</a>
             <a href="/dashboard/posts" class="btn btn-warning"><span data-feather="edit"></span> Edit</a>
             <a href="/dashboard/posts" class="btn btn-danger"><span data-feather="x-circle"></span> Delete</a>
+            @if ($post->image)
+                <img src="{{ asset('storage/' . $post->image) }}" class="card-img-top mt-2" alt="{{ $post->category->name }}">
+            @else
             <img src="https://source.unsplash.com/500x250/?{{ $post->category->name }}" class="card-img-top mt-2" alt="{{ $post->category->name }}">
+            @endif
             <article class="my-3 fs-5">
                  {!! $post->body !!}
             </article>
