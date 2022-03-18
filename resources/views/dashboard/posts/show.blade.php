@@ -12,7 +12,7 @@
             <a href="/dashboard/posts" class="btn btn-warning"><span data-feather="edit"></span> Edit</a>
             <a href="/dashboard/posts" class="btn btn-danger"><span data-feather="x-circle"></span> Delete</a>
             @if ($post->image)
-                <img src="{{ asset('storage/' . $post->image) }}" class="card-img-top mt-2" alt="{{ $post->category->name }}">
+                <img src="{{ asset('storage/' . $post->image) }}" class="card-img-top mt-2" alt="{{ $post->category->name }}" width="50" height="150">
             @else
             <img src="https://source.unsplash.com/500x250/?{{ $post->category->name }}" class="card-img-top mt-2" alt="{{ $post->category->name }}">
             @endif
